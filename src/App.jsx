@@ -6,11 +6,11 @@
 let [loder,setloder]=useState(false);
 
   // add a search funftonality
-  const movietypes=async(val)=>{
+  const movietypes=async()=>{
      try{
       setloder(true)
 
-      const res = await fetch(`https://dummyapi.online/api/movies/${val}`, {
+      const res = await fetch(`https://dummyapi.online/api/movies/${movietype}`, {
       method: 'GET',
       credentials: 'include',
     });
@@ -49,7 +49,7 @@ let [loder,setloder]=useState(false);
    return (
      <div style={{display:'flex',alignItems:'center',width:'100vw',minHeight:'100vh',marginTop:'2vw',flexDirection:'column',paddingBottom:'2vw'}}>
       <h1 style={{fontWeight:'600',color:'blue',fontSize:'2.5rem '}}>MOVIE APP</h1>
-      <input type="text" value={movietype} style={{margin:'20px 0px',width:'80%',outline:'none',border:'black 1px solid',padding:'1.5vw',borderRadius:'5vw',fontSize:'2vw'}} placeholder='search type of movie'  onChange={e=>{movietypes(e.target.value)}} />
+      <input type="text" value={movietype} style={{margin:'20px 0px',width:'80%',outline:'none',border:'black 1px solid',padding:'1.5vw',borderRadius:'5vw',fontSize:'2vw'}} placeholder='search type of movie'  onChange={e=>{ movietypes();setMovietype(e.target.value)}} />
       
      {loder?<img src='loder.gif' style={{width:'7vw'}}/>: <div style={{display:'flex',alignItems:'center',flexDirection:'column', gap:'2px',width:'70vw'}}>
       {movie?.movie?.map((val,i)=>{

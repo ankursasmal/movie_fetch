@@ -1,12 +1,68 @@
-# React + Vite
+🎬 Movie Fetch App (Vite + React)
+This is a React project built with Vite that fetches movie data from a dummy API and displays it. Users can search movies by type dynamically.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Fetches movie data from Dummy API
+Displays movie posters, names, ratings, and release years
+Search functionality based on movie type or name
+Loader animation while fetching data
+🖥️ Demo Screenshot
+(Optional: Add screenshot here if you want)
 
-Currently, two official plugins are available:
+📂 Installation & Running Locally
+Clone the Repository:
+bash
+Copy
+Edit
+git clone https://github.com/ankursasmal/movie_fetch.git
+cd movie_fetch
+Install Dependencies:
+bash
+Copy
+Edit
+npm install
+Start the Development Server:
+bash
+Copy
+Edit
+npm run dev
+The app will run at http://localhost:5173/ (or the port Vite shows).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 API Used:
+Dummy API endpoint:
 
-## Expanding the ESLint configuration
+arduino
+Copy
+Edit
+https://dummyapi.online/api/movies
+Example response:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+json
+Copy
+Edit
+[
+  {
+    "id": 1,
+    "image": "https://dummyimage.com/600x400/000/fff",
+    "movie": "The Shawshank Redemption",
+    "rating": 9.3,
+    "year": 1994
+  },
+  ...
+]
+🔎 Search Feature:
+Type any movie name or keyword in the input box.
+Movies matching the keyword will be displayed.
+Search works dynamically as you type.
+📄 Project Structure
+arduino
+Copy
+Edit
+public/
+│   └── loader.gif       # Loader image
+src/
+│   └── App.jsx          # Main React component
+│   └── main.jsx         # React/Vite entry point
+vite.config.js
+README.md
+package.json
