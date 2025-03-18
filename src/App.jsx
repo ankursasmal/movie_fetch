@@ -54,9 +54,11 @@ let [loder,setloder]=useState(false);
      {loder?<img src='loder.gif' style={{width:'7vw'}}/>: <div style={{display:'flex',alignItems:'center',flexDirection:'column', gap:'2px',width:'70vw'}}>
       {movie?.movie?.map((val,i)=>{
         return(
-          <div key={i} style={{width:'100%'}}>
+          <div key={i} style={{width:'100%',display:'flex',alignItems:'start',gap:'3px',border:'1px solid black',borderRadius:'5%'}}>
             <img src={val.image} />
-            </div>
+            <span style={{padding:'0 3px'}}> {val.movie}</span>
+            <span> {val.rating}</span>
+            </div> 
         )
       })}
         </div> }
